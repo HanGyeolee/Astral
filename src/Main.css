@@ -1,0 +1,745 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
+
+:root{
+    --main-color: #363636;
+    --main-color-75: #363636c0;
+    --main-color-50: #36363680;
+    --main-color-25: #36363640;
+    --select-color: #363636c0;
+    --white-50: #ffffff80;
+}
+
+*{
+    -webkit-tap-highlight-color: transparent;
+    font-family: sans-serif;
+}
+
+section{
+    background-color: white;
+    height: fit-content;
+}
+article{
+    height: fit-content;
+}
+article>div.flex{
+    display: flex;
+    flex-direction: column;
+}
+
+p, h1, h2, h3, h4, h5, label{
+    color: var(--main-color);
+}
+
+h1, h5{
+    font-weight: 700;
+}
+h2{
+    font-weight: 400;
+}
+h3, h4, b, strong{
+    font-weight: 800;
+}
+h3, h4{
+    letter-spacing: 0.5rem;
+}
+i, em, sup, sub{
+    font-weight: 300;
+    color: var(--main-color-75);
+}
+blockquote{
+    margin: 2rem 0 2rem 0;
+    padding: 1rem 0rem 1rem 3rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 2rem;
+    border-left: 4px solid var(--main-color-25);
+}
+pre{
+    padding: 2rem 2rem 2rem 2rem;
+    margin-bottom: 2rem;
+    border:  1px solid var(--main-color-25);
+    border-radius: 0.25rem;
+}
+p, label{
+    line-height: 1.75rem;
+    vertical-align: baseline;
+}
+p.left, p.left>*{
+    float: left;
+    line-height: 2.25rem;
+}
+p.right, p.right>*{
+    float: right;
+    line-height: 2.25rem;
+}
+p.left>*, p.right>*{
+    width: 11rem;
+}
+p.left>*{
+    margin: 0rem 2rem 0.25rem 0rem;
+}
+p.right>*{
+    margin: 0rem 0rem 0.25rem 2rem;
+}
+span{
+    cursor: pointer;
+    color: var(--main-color);
+    transition: 0.25s;
+}
+span:hover{
+    color: var(--select-color);
+}
+a{
+    transition: 0.25s;
+    color: var(--main-color);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--main-color);
+}
+a:hover{
+    color: var(--select-color);
+    border-color: transparent;
+}
+hr{
+    border-top: 1px solid var(--main-color-50);
+}
+hr.blank{
+    border: 0;
+}
+ul>li>ul{
+    padding: 0 !important;
+}
+ul.alt, ul.alt_no{
+    position: relative;
+    padding: 1rem 0rem 1rem 0rem;
+    list-style: none;
+}
+ul.alt:after{
+    position: absolute;
+    display: block;
+    content: " ";
+    top: 0px;
+    left: 0px;
+    width: calc(100% - 1rem);
+    height: calc(100% - 2rem);
+    margin: 1rem 0rem 1rem 0rem;
+    box-sizing: border-box;
+    border: 2px solid white;
+    pointer-events: none;
+}
+ul.alt>li{
+    margin-right: 1rem;
+    box-sizing: border-box;
+    border: 1px solid var(--main-color-25);
+    padding: 0.5rem 0rem;
+}
+ul.alt_no>li{
+    padding: 0.5rem 0rem;
+}
+li svg{
+    background-color: #585858;
+}
+ul.horizontal{
+    display: flex;    
+    padding: 1rem 1rem 0rem 0rem;
+}
+ul.horizontal>li{
+    padding: 0.5rem 2rem 0.5rem 0rem;
+    list-style: none;
+}
+ul.horizontal>li:last-child{
+    padding-right: 0rem;
+}
+ul.horizontal.alt{
+    transform: translateX(-12.5%) scale(0.75);
+}
+ul.horizontal.alt>li{
+    border: 0;
+    display: flex;
+}
+ul.horizontal.alt>li:not(:last-child){
+    border-right: 1px solid var(--main-color-50);
+}
+ul.horizontal.alt>li p, ul.horizontal.alt>li a{
+    color: var(--main-color-50);
+}
+ul.horizontal.alt>li a:hover{
+    color: var(--select-color);
+}
+ul.fit{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+ul.fit>li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+ul.fit>li>button{
+    flex: 1;
+}
+ul.flex{
+    flex-wrap: wrap;
+}
+.borderbox{
+  padding: 1rem;
+  border: 1px solid var(--main-color-25);
+  border-radius: 0.25rem;
+}
+li>p{
+    margin-bottom: 0;
+}
+
+div.fit{
+    display: flex;
+    width: 100%;
+}
+div.fit>*{
+    flex: 1;
+}
+
+button.fit{
+    width: 100%;
+}
+button, button.default, input[type="reset"], input[type="submit"]{
+    display: flex;
+    align-items: center;
+    border-radius: 0.25rem;
+    border: 2px solid var(--main-color);
+    background-color: white;
+    transition: 0.5s;
+}
+button.primary, input[type="submit"]{
+    background-color: var(--main-color);
+}
+button>a>p, button.primary>a>p{
+    transition: 0.5s;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.25rem;
+    margin-right: -0.25rem;
+}
+button.primary>a>p, input[type="submit"]{
+    color: white;
+}
+button>a{
+    flex: 1;
+}
+button>a>p{
+    text-align: center;
+    color: var(--main-color);
+}
+button:not(.disabled):hover, button:not(.disabled):hover>a>p, 
+button.default:not(.disabled):hover, button.default:not(.disabled):hover>a>p,
+input[type="reset"]:hover{
+    color: var(--select-color);
+}
+button.primary:not(.disabled):hover, input[type="submit"]:hover{
+    background-color: var(--select-color);
+}
+button.primary:not(.disabled):hover>a>p, input[type="submit"]:hover{
+    color: white;
+}
+button.primary:not(.disabled):hover, button:not(.disabled):hover, button.default:not(.disabled):hover
+, input[type="submit"]:hover, input[type="reset"]:hover{
+    border: 2px solid var(--select-color);
+}
+button svg{
+    transition: 0.5s;
+    margin-right: 0.5rem;
+}
+button.primary svg{
+    background-color: white;
+}
+button svg, button a{
+    float: left;
+    border-bottom: 0px;
+}
+button:not(.disabled):hover svg, button.default:not(.disabled):hover svg{
+    background-color: var(--select-color);
+}
+button.primary:not(.disabled):hover svg{
+    background-color: white;
+}
+button.disabled{
+    opacity: 0.5;
+}
+button.disabled a{
+    cursor: default;
+}
+
+header svg:first-child{
+    margin-left: -0.75rem;
+    padding: 0.75rem 0.75rem;
+}
+
+span{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+table{
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+thead{
+    color: var(--main-color);
+}
+thead th, tbody td{
+    text-align: start;
+    font-size: 1.2rem;
+    padding: 1.1rem;
+}
+tbody td{
+    color: var(--main-color-75);
+}
+table tr:last-child>th, table tr:nth-last-child(2)>td{
+    border-bottom: 2px solid var(--main-color-25);
+}
+table tr>td{
+    border-bottom: 1px solid var(--main-color-25);
+}
+table tr:last-child>td{
+    border-bottom: 0;
+}
+table.alt>tbody>tr>td{
+    border: 1px solid var(--main-color-25);
+}
+table.alt>thead>tr:last-child>th ,table.alt>tbody>tr:last-child>td{
+    border: 0;
+}
+select{
+    margin-top: 2rem;
+    width: 100%;
+}
+textarea{
+    min-height: 20rem;
+}
+select, input, textarea{
+    border: 0px;
+    box-sizing: border-box;
+    padding: 1.5rem 1rem;
+    color: var(--main-color);
+    font-weight: 400;
+}
+select:focus-visible, input:focus-visible, textarea:focus-visible{
+    border: 0px;
+    box-sizing: border-box;
+    outline: none;
+    padding: calc(1.5rem - 2px) calc(1rem - 2px);
+    border: 2px solid var(--main-color);
+    border-radius: 0.25rem;
+}
+label{
+    cursor: pointer;
+}
+input[type="radio"], input[type="checkbox"]{
+    margin-right: 1rem;
+}
+input[type="radio"]::before{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    content: url(./svg/check-solid.svg);
+    position: relative;
+    top: -0.375rem;
+    left: -0.375rem;
+    color: white;
+    background-color: white;
+    border-radius: 50%;
+    border:  1px solid var(--main-color);
+}
+input[type="radio"]:checked::before{
+    background-color: var(--main-color);
+    border:  1px solid var(--main-color);
+}
+input[type="checkbox"]::before{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    content: url(./svg/check-solid.svg);
+    position: relative;
+    top: -0.375rem;
+    left: -0.375rem;
+    color: white;
+    background-color: white;
+    border-radius: 5px;
+    border:  1px solid var(--main-color);
+}
+input[type="checkbox"]:checked::before{
+    background-color: var(--main-color);
+    border:  1px solid var(--main-color);
+}
+textarea{
+    width: 100%;
+    margin-top: 1rem;
+    resize: none;
+}
+img{
+    width: 99%;
+    border-radius: 0.25rem;
+}
+
+@media all and (min-width:1681px){
+    section{
+        width: 75rem;
+        min-height: 24rem;
+    }
+    h1{
+        font-size: 4rem;
+        margin: 0px 0px 3.25rem 0px;
+    }
+    h2{
+        font-size: 3rem;
+        margin: 0px 0px 3rem 0px;
+    }
+    p{
+        font-size: 1.75rem;
+        font-weight: 300;
+        line-height: 3rem;
+        color: var(--main-color-50);
+        margin: 0 0 2.5rem 0;
+    }
+    footer p{
+        font-size: 1.25rem;
+    }
+    label, select, input, textarea{
+        font-size: 1.5rem;
+    }
+    ul, ol{
+        padding: 1rem;
+    }
+    li{
+        padding: 0.5rem 1rem;
+    }
+    li svg{
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    button.large{
+        padding: 1.625rem 2.25rem;
+    }
+    button.large p{
+        font-size: 1.5rem;
+    }
+    button, button.default, button.primary, input[type="reset"], input[type="submit"]{
+        padding: 1.125rem 1.75rem;
+    }
+    button p{
+        font-size: 1.25rem;
+    }
+    button.small{
+        padding: 0.5rem 1rem;
+    }
+    button.small p{
+        font-size: 0.875rem;
+    }
+    input:not(:first-child){
+        margin-left: 1rem;
+    }
+}
+@media all and (max-width:1680px){
+    section{
+        width: 900px;
+        min-height: 1rem;
+    }
+    span{
+        font-size: 1rem;
+        font-weight: 800;
+    }
+    h1{
+        font-size: 3.25rem;
+        margin: 0px 0px 3.25rem 0px;
+    }
+    h2{
+        font-size: 2.25rem;
+        margin: 0px 0px 3rem 0px;
+    }
+    h3{
+        font-size: 1.125rem;
+        margin: 0px 0px 2.25rem 0px;
+    }
+    h4{
+        font-size: 0.875rem;
+        margin: 0px 0px 1.75rem 0px;
+    }
+    p{
+        font-size: 1.25rem;
+        margin: 0 0 2.5rem 0;
+    }
+    footer p{
+        font-size: 0.9rem;
+    }
+    label, select, input, textarea{
+        font-size: 1.25rem;
+    }
+    blockquote{
+        font-size: 1.3125rem;
+    }
+    hr{
+        margin: 2.5rem 0;
+    }
+    ul, ol{
+        padding: 1rem;
+    }
+    li{
+        padding: 0.5rem 1rem;
+    }
+    li svg{
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    button.large{
+        padding: 1.625rem 2.25rem;
+    }
+    button.large p{
+        font-size: 1.5rem;
+    }
+    button, button.default, button.primary, input[type="reset"], input[type="submit"]{
+        padding: 1.125rem 1.75rem;
+    }
+    button p{
+        font-size: 1.25rem;
+    }
+    button.small{
+        padding: 0.5rem 1rem;
+    }
+    button.small p{
+        font-size: 0.875rem;
+    }
+    input:not(:first-child){
+        margin-left: 1rem;
+    }
+}
+@media all and (max-width:1280px){
+    section{
+        width: 840px;
+        min-height: 1rem;
+    }
+    body>div{
+        padding: 0px 2rem;
+    }
+    span{
+        font-size: 0.875rem;
+        font-weight: 800;
+    }
+    h1{
+        font-size: 3rem;
+        margin: 0px 0px 3rem 0px;
+    }
+    h2{
+        font-size: 2.15rem;
+        margin: 0px 0px 2.3rem 0px;
+    }
+    h3{
+        font-size: 1rem;
+        margin: 0px 0px 2rem 0px;
+    }
+    h4{
+        font-size: 0.75rem;
+        margin: 0px 0px 1.5rem 0px;
+    }
+    p{
+        font-size: 1.125rem;
+        margin: 0 0 2.5rem 0;
+        font-weight: 300;
+    }
+    footer p{
+        font-size: 0.8rem;
+    }
+    label, select, input, textarea{
+        font-size: 1.125rem;
+    }
+    blockquote{
+        font-size: 1.155rem;
+    }
+    hr{
+        margin: 2.5rem 0;
+    }
+    ul, ol{
+        padding: 1rem;
+    }
+    li{
+        padding: 0.5rem 1rem;
+    }
+    li svg{
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+    button.large{
+        padding: 1.125rem 2.125rem;
+    }
+    button.large p{
+        font-size: 1.125rem;
+    }
+    button, button.default, button.primary, input[type="reset"], input[type="submit"]{
+        padding: 0.75rem 1.5rem;
+    }
+    button p{
+        font-size: 1rem;
+    }
+    button.small{
+        padding: 0.25rem 1rem;
+    }
+    button.small p{
+        font-size: 0.625rem;
+    }
+    input:not(:first-child){
+        margin-left: 1rem;
+    }
+}
+@media all and (max-width:980px){
+    section{
+        width: 84.6vw;
+        min-height: 1rem;
+    }
+    body>div{
+        padding: 0px 3rem;
+    }
+    span{
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    h1{
+        font-size: 2.75rem;
+        margin: 0px 0px 2.75rem 0px;
+    }
+    h2{
+        font-size: 2rem;
+        margin: 0px 0px 2.1rem 0px;
+    }
+    h3{
+        font-size: 0.875rem;
+        margin: 0px 0px 1.75rem 0px;
+    }
+    h4{
+        font-size: 0.625rem;
+        margin: 0px 0px 1.25rem 0px;
+    }
+    p{
+        font-size: 1rem;
+        margin: 0 0 2rem 0;
+        font-weight: 300;
+    }
+    label, select, input, textarea{
+        font-size: 1rem;
+    }
+    blockquote{
+        font-size: 1rem;
+    }
+    li svg{
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+    button.large{
+        padding: 1rem 1.375rem;
+    }
+    button.large p{
+        font-size: 1rem;
+    }
+    button, button.default, button.primary, input[type="reset"], input[type="submit"]{
+        padding: 0.625rem 1.125rem;
+    }
+    button p{
+        font-size: 0.75rem;
+    }
+    button.small{
+        padding: 0.25rem 1rem;
+    }
+    button.small p{
+        font-size: 0.625rem;
+    }
+    input:not(:first-child){
+        margin-left: 0rem;
+    }
+}
+@media all and (max-width:736px){
+    section{
+        width: 95.3vw;
+        min-height: 1rem;
+    }
+    body>div{
+        padding: 0px 1rem;
+    }
+    span{
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    h1{
+        font-size: 2.625rem;
+        margin: 0px 0px 2.625rem 0px;
+    }
+    h2{
+        font-size: 1.125rem;
+        font-weight: 700;
+        margin: 0px 0px 2rem 0px;
+    }
+    h3{
+        font-size: 0.75rem;
+        margin: 0px 0px 1.5rem 0px;
+    }
+    blockquote{
+        font-size: 0.95rem;
+    }
+    ul, ol{
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+    }
+    ol{
+        padding-left: 1.25rem;
+    }
+    li{
+        padding: 0.25rem 1rem;
+    }
+    button.large{
+        padding: 1rem 1.375rem;
+    }
+    button.large p{
+        font-size: 1rem;
+    }
+    button, button.default, button.primary, input[type="reset"], input[type="submit"]{
+        padding: 0.625rem 1.125rem;
+    }
+    button p{
+        font-size: 0.75rem;
+    }
+    button.small{
+        padding: 0.25rem 0.875rem;
+    }
+    button.small p{
+        font-size: 0.5rem;
+    }
+    input:not(:first-child){
+        margin-left: 0rem;
+    }
+}
+@media all and (max-width:360px){
+    section{
+        width: 100vw;
+        min-height: 1rem;
+    }
+    body>div{
+        padding: 0px 0rem;
+    }
+    h1{
+        font-size: 2rem;
+        margin: 0px 0px 2rem 0px;
+    }
+    h4{
+        font-size: 0.75rem;
+        margin: 0px 0px 1.5rem 0px;
+    }
+    footer p{
+        font-size: 0.6rem;
+    }
+    button, button.default, button.primary, input[type="reset"], input[type="submit"]{
+        padding: 0.625rem 1.125rem;
+    }
+    button p{
+        font-size: 0.75rem;
+    }
+    input:not(:first-child){
+        margin-left: 0rem;
+    }
+}

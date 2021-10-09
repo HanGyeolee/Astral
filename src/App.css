@@ -1,0 +1,324 @@
+.App {
+  text-align: center;
+}
+.App>img:first-child{
+  position: absolute;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8rem;
+}
+footer ul.horizontal>li{
+  padding: 0.5rem 1rem 0.5rem 0rem;
+}
+footer p{
+  color: var(--white-50);
+}
+footer a{
+  color: var(--white-50);
+  border-bottom: 2px solid var(--white-50);
+  transition: 0.5s;
+}
+footer a:hover{
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.headersvg{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.headersvg>span{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: 400;
+  background-color: var(--main-color);
+  opacity: 0;
+}
+.headersvg>span:hover{
+  color: white;
+}
+.headersvg>span:after{
+  position: absolute;
+  content: '';
+  background-color: transparent;
+  width: 0; 
+  height: 0;
+}
+.headersvg:hover>span{
+  opacity: 1;
+}
+.headersvg svg{
+  color: var(--white-50);
+  background-color: transparent;
+  transition: 0.5s;
+}
+.headersvg.active svg{
+  color: white;
+  background-color: transparent;
+}
+.headersvg:hover svg{
+  color: white;
+  background-color: transparent;
+}
+.headersvg>svg:last-child{
+  position: absolute;
+  background-color: transparent;
+  width: 0; 
+  height: 0; 
+  transition: 0.25s;
+  bottom: -2.5rem;
+}
+.headersvg.active>svg:last-child{
+  position: absolute;
+  background-color: transparent;
+  width: 0; 
+  height: 0; 
+  bottom: -2.5rem;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.SectionAnimation{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+.SectionAnimation>section{
+  transition: 0.5s;
+}
+.SectionAnimation>section>*{
+  opacity: 1;
+}
+.SectionAnimation>section.fade-enter-active {
+  opacity: 0;
+  transition: 0s;
+}
+.SectionAnimation>section.fade-enter-done {
+  opacity: 1;
+  transition: 0s;
+}
+.SectionAnimation>section.fade-enter-active>* {
+  opacity: 0;
+  transition: 0s;
+}
+.SectionAnimation>section.fade-enter-done>* {
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+.SectionAnimation>section:nth-child(2){
+  opacity: 1;
+  position: absolute;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+}
+.SectionAnimation>section:nth-child(2)>*{
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+.App-header {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@media all and (min-width:1681px){
+  .App-header {
+    margin-top: 3rem;
+    min-height: 19vh;
+  }
+  .headersvg>span{
+    top: -100%;
+    padding: 0.75rem 1.75rem;
+  }
+  .headersvg>svg:not(:last-child){
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .headersvg>svg:last-child{
+    border-left: 2rem solid transparent;
+    border-right: 2rem solid transparent;
+    border-bottom: 0rem solid var(--white-50);
+  }
+  .headersvg.active>svg:last-child{
+    border-left: 2rem solid transparent;
+    border-right: 2rem solid transparent;
+    border-bottom: 2rem solid white;
+  }
+  .headersvg>span:after{
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1rem solid var(--main-color);
+    bottom: -0.5rem;
+  }
+  header ul.horizontal>li {
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  }
+}
+@media all and (max-width:1680px){
+  .App-header {
+    margin-top: 0rem;
+    min-height: 19vh;
+  }
+  .headersvg>span{
+    top: -120%;
+    padding: 0.5rem 1.5rem;
+  }
+  .headersvg>svg:not(:last-child){
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .headersvg>svg:last-child{
+    border-left: 1.6rem solid transparent;
+    border-right: 1.6rem solid transparent;
+    border-bottom: 0rem solid var(--white-50);
+  }
+  .headersvg.active>svg:last-child{
+    border-left: 1.6rem solid transparent;
+    border-right: 1.6rem solid transparent;
+    border-bottom: 1.6rem solid white;
+  }
+  .headersvg>span:after{
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1rem solid var(--main-color);
+    bottom: -0.5rem;
+  }
+  header ul.horizontal>li {
+    padding: 0.5rem 1.125rem 0.5rem 1.125rem;
+  }
+}
+@media all and (max-width:1280px){
+  .App-header {
+    margin-top: 0rem;
+    min-height: 16vh;
+  }
+  .headersvg>span{
+    top: -120%;
+    padding: 0.5rem 1.5rem;
+  }
+  .headersvg>svg:not(:last-child){
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .headersvg>svg:last-child{
+    border-left: 1.6rem solid transparent;
+    border-right: 1.6rem solid transparent;
+    border-bottom: 0rem solid var(--white-50);
+  }
+  .headersvg.active>svg:last-child{
+    border-left: 1.6rem solid transparent;
+    border-right: 1.6rem solid transparent;
+    border-bottom: 1.6rem solid white;
+  }
+  .headersvg>span:after{
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1rem solid var(--main-color);
+    bottom: -0.5rem;
+  }
+  header ul.horizontal>li {
+    padding: 0.5rem 1.125rem 0.5rem 1.125rem;
+  }
+}
+@media all and (max-width:980px){
+  .App-header {
+    margin-top: 0rem;
+    min-height: 2rem;
+  }
+  .headersvg>span{
+    visibility: hidden;
+  }
+  .headersvg>svg:not(:last-child){
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .headersvg>svg:last-child{
+    border-left: 1.6rem solid transparent;
+    border-right: 1.6rem solid transparent;
+    border-bottom: 0rem solid var(--white-50);
+  }
+  .headersvg.active>svg:last-child{
+    border-left: 1.6rem solid transparent;
+    border-right: 1.6rem solid transparent;
+    border-bottom: 1.6rem solid white;
+  }
+  .headersvg>span:after{
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1rem solid var(--main-color);
+    bottom: -0.5rem;
+  }
+  header ul.horizontal{
+    padding: 0rem 0rem 0rem 0rem;
+  }
+  header ul.horizontal>li {
+    padding: 0.5rem 1.125rem 0.5rem 1.125rem;
+  }
+}
+@media all and (max-width:736px){
+  .App-header {
+    margin-top: 0rem;
+    min-height: 2rem;
+  }
+  .headersvg>span{
+    visibility: hidden;
+  }
+  .headersvg>svg:not(:last-child){
+    width: 2rem;
+    height: 2rem;
+  }
+  .headersvg>svg:last-child{
+    border-left: 1.6rem solid transparent;
+    border-right: 1.6rem solid transparent;
+    border-bottom: 0rem solid var(--white-50);
+  }
+  .headersvg.active>svg:last-child{
+    border-left: 1.6rem solid transparent;
+    border-right: 1.6rem solid transparent;
+    border-bottom: 1.6rem solid white;
+  }
+  .headersvg>span:after{
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1rem solid var(--main-color);
+    bottom: -0.5rem;
+  }
+  header ul.horizontal{
+    margin: 0.75rem 0rem 1.5rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
+  }
+  header ul.horizontal>li {
+    padding: 0.5rem 1.125rem 0.5rem 1.125rem;
+  }
+}

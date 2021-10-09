@@ -1,0 +1,47 @@
+section>article{
+    text-align: start;
+    width: 100%;
+}
+
+section>article ul.horizontal>li{
+    padding: 0.5rem 1rem 0.5rem 0rem;
+}
+
+@media all and (min-width:1681px){
+    section>article ul.horizontal img{
+        width: 20rem;
+    }
+    section>article{
+        padding: 6rem 4rem;
+    }
+}
+@media all and (max-width:1680px){
+    section>article ul.horizontal img{
+        width: 14.5rem;
+    }
+    section>article{
+        padding: 4rem 3rem;
+    }
+}
+@media all and (max-width:980px){
+    section>article ul.horizontal img{
+        width: 35vw;
+    }
+    section>article{
+        padding: 4rem 3rem;
+    }
+    section>article ul.horizontal>li{
+        padding: 0.5rem 0.5vw 0.5rem 0rem;
+    }
+}
+@media all and (max-width:736px){
+    section>article ul.horizontal img{
+        width: 89.1vw;
+    }
+    section>article{
+        padding: 2rem 1.5rem;
+    }
+    section>article ul.horizontal>li{
+        padding: 0.5rem 0.9vw 0.5rem 0rem;
+    }
+}
