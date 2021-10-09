@@ -2,7 +2,7 @@
 본 프로젝트는 [이미 존재하는 프로젝트](https://html5up.net/astral)를 보고 UI 및 애니메이션을 유추하여 클론 코딩하였습니다.
 
 리액트를 공부하게 되면서 상기시켜야할 만한 부분들을 정리하였습니다.
-## Route Transitioning animation
+## Route Transitioning Animation
 화면과 화면 간에 전환이 진행될 때 애니메이션을 넣는 방법입니다.    
 더 자세한 내용은 [참고 사이트](https://baeharam.netlify.app/posts/react/React-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%84%ED%99%98-%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)에서 확인하시기 바랍니다.
 ``` javascript
