@@ -48,7 +48,7 @@ const App = () => {
   const [headersvgs, setSvgs] = useState([
       {
         id: 0,
-        click: () => Move("/", 0),
+        click: () => Move("/Astral", 0),
         type: "home",
         active: true
       },
@@ -66,7 +66,7 @@ const App = () => {
       },
       {
         id: 3,
-        click: () => Move("/", 3),
+        click: () => Move("/Astral", 3),
         type: "twitter",
         active: false
       }

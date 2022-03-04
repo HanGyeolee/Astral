@@ -58,8 +58,8 @@ function Footer(){
     <footer>
       <ul className="horizontal">
         <li><p>© Untitled.</p></li>
-        <li><p>Design:&nbsp;<a href="/">HTML5 UP</a></p></li>
-        <li><p>Demo Images:&nbsp;<a href="/">Unsplash</a></p></li>
+        <li><p>Design:&nbsp;<a href="/Astral">HTML5 UP</a></p></li>
+        <li><p>Demo Images:&nbsp;<a href="/Astral">Unsplash</a></p></li>
       </ul>
     </footer>
   );
@@ -71,7 +71,7 @@ const App = () => {
   const [headersvgs, setSvgs] = useState([
     {
       id: 0,
-      click: () => Move("/", 0),
+      click: () => Move("/Astral", 0),
       type: "home",
       active: true
     },
@@ -89,7 +89,7 @@ const App = () => {
     },
     {
       id: 3,
-      click: () => Move("/", 3),
+      click: () => Move("/Astral", 3),
       type: "twitter",
       active: false
     }
@@ -121,7 +121,7 @@ const App = () => {
         <CSSTransition key={location.pathname} classNames="fade" timeout={500}>
           <section>
             <Switch location={location}>
-              <Route exact path="/" children={<Home className="fade-enter-done" click={() => Move("/work", 1)}/>}/>
+              <Route exact path="/Astral" children={<Home className="fade-enter-done" click={() => Move("/work", 1)}/>}/>
               <Route exact path="/work" children={<Work/>}/>
               <Route exact path="/contact" children={<Contact/>}/>
             </Switch>
