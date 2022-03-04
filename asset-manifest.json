@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Astral/static/css/main.9afe5e41.chunk.css",
-    "main.js": "/Astral/static/js/main.dbdd403b.chunk.js",
-    "main.js.map": "/Astral/static/js/main.dbdd403b.chunk.js.map",
+    "main.js": "/Astral/static/js/main.78458488.chunk.js",
+    "main.js.map": "/Astral/static/js/main.78458488.chunk.js.map",
     "runtime-main.js": "/Astral/static/js/runtime-main.a692b7b0.js",
     "runtime-main.js.map": "/Astral/static/js/runtime-main.a692b7b0.js.map",
     "static/js/2.b7a5f1e7.chunk.js": "/Astral/static/js/2.b7a5f1e7.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.a692b7b0.js",
     "static/js/2.b7a5f1e7.chunk.js",
     "static/css/main.9afe5e41.chunk.css",
-    "static/js/main.dbdd403b.chunk.js"
+    "static/js/main.78458488.chunk.js"
   ]
 }
