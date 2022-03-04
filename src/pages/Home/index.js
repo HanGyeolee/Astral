@@ -12,7 +12,7 @@ export const Home = (props) => {
             </article>
             <article>
                 <Link onClick={props.click} className="next" to="/Work">
-                    <img src="/img/me.jpg" alt="girl"></img>
+                    <img src="./img/me.jpg" alt="girl"></img>
                 </Link>
             </article>
         </div>
