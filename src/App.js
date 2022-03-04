@@ -114,7 +114,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <img src="./img/bg.jpg" alt="background image"/>
+      <img src="https://hangyeolee.github.io/Astral/img/bg.jpg" alt="background image"/>
       <Header svgs={headersvgs}/>
       <TransitionGroup className="SectionAnimation">
         {/* 애니메이션을 위한 */}
