@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Astral/static/css/main.9afe5e41.chunk.css",
+    "main.js": "/Astral/static/js/main.dbdd403b.chunk.js",
+    "main.js.map": "/Astral/static/js/main.dbdd403b.chunk.js.map",
+    "runtime-main.js": "/Astral/static/js/runtime-main.a692b7b0.js",
+    "runtime-main.js.map": "/Astral/static/js/runtime-main.a692b7b0.js.map",
+    "static/js/2.b7a5f1e7.chunk.js": "/Astral/static/js/2.b7a5f1e7.chunk.js",
+    "static/js/2.b7a5f1e7.chunk.js.map": "/Astral/static/js/2.b7a5f1e7.chunk.js.map",
+    "static/js/3.ddb8fe86.chunk.js": "/Astral/static/js/3.ddb8fe86.chunk.js",
+    "static/js/3.ddb8fe86.chunk.js.map": "/Astral/static/js/3.ddb8fe86.chunk.js.map",
+    "index.html": "/Astral/index.html",
+    "static/css/main.9afe5e41.chunk.css.map": "/Astral/static/css/main.9afe5e41.chunk.css.map",
+    "static/js/2.b7a5f1e7.chunk.js.LICENSE.txt": "/Astral/static/js/2.b7a5f1e7.chunk.js.LICENSE.txt",
+    "static/media/Main.css": "/Astral/static/media/check-solid.2f94d1e5.svg",
+    "static/media/index.css": "/Astral/static/media/chevron-right-solid.8971e59e.svg",
+    "static/media/envelope-solid.1ec35bbe.svg": "/Astral/static/media/envelope-solid.1ec35bbe.svg",
+    "static/media/folder-solid.380cada5.svg": "/Astral/static/media/folder-solid.380cada5.svg",
+    "static/media/home-solid.831db11d.svg": "/Astral/static/media/home-solid.831db11d.svg",
+    "static/media/twitter-brands.87682341.svg": "/Astral/static/media/twitter-brands.87682341.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a692b7b0.js",
+    "static/js/2.b7a5f1e7.chunk.js",
+    "static/css/main.9afe5e41.chunk.css",
+    "static/js/main.dbdd403b.chunk.js"
+  ]
+}
