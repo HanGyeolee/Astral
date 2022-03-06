@@ -7,7 +7,7 @@ export const Home = (props) => {
     return (
         <div className="row2_1">
             <article>
-                <h1>Jane Doe</h1>
+                <h1>Choi HanGyeol</h1>
                 <p>Senior Astral Projectionist</p>
             </article>
             <article>

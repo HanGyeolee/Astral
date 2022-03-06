@@ -7,7 +7,9 @@ export const Contact = () => {
     return (
         <article>
             <h2>Contact Me</h2>
-            <form>
+            <form onSubmit={(e) => {
+                e.preventDefault();
+            }}>
                 <div className="wrap">
                     <input type="text" name="name" placeholder="Name"/>
                     <input type="email" name="email" placeholder="Email"/>
